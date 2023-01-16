@@ -1,0 +1,31 @@
+(Docker/Docker-compose)
+
+1. Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to 
+configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
+2. Install docker 
+Spin up Centos 
+    2.1 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+    2.2 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+    2.3 sudo yum install -y docker-ce
+    2.4 sudo systemctl start docker
+    2.5 sudo systemctl enable docker
+    2.6 id centos --> docker group is missing 
+    2.7 sudo usermod -aG docker centos
+    2.8 exit from VM and log back in and run docker images command again 
+Install docker compose 
+    1. sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    2. sudo chmod +x /usr/local/bin/docker-compose
+    3. exit and log back in and type docker-compose 
+
+Docker deep dive 
+1. docker info --> check all docker info 
+2. docker info | grep -i root --> check docker disk usage 
+3. sudo du -sh /var/lib/docker/
+4. docker-compose is a definition file for docker containers 
+
+Docker-compose commands 
+1. docker-compose up -d
+2. docker logs -f  jenkins
+3. docker-compose stop
+4. docker-compose start
+5. docker-compose down
