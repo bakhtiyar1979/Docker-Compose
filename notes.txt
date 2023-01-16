@@ -25,7 +25,7 @@ Docker deep dive
 
 Docker-compose commands 
 1. docker-compose up -d
-2. docker logs -f  jenkins
+2. docker logs -f  jenkins   (jenkins is the name of the docker here)
 3. docker-compose stop
 4. docker-compose start
 5. docker-compose down
